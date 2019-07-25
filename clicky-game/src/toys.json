@@ -1,0 +1,16 @@
+[
+
+    {
+        "id": 1,
+        "name": "Woody",
+        "src": "../../assets/img/woody.png",
+        "role": "Sherrif"
+    }, 
+
+{
+    "id": 1,
+    "name": "Buzz",
+    "src": "../../assets/img/woody.png",
+    "role": "Astronout"
+}
+]
