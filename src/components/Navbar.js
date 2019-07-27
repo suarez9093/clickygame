@@ -1,12 +1,12 @@
 import React from "react";
 
-function Navbar() {
+function Navbar(propts) {
     return (
         <div>
             <nav className="navbar navbar-light bg-light">
                 <a className="navbar-brand" href="#">Clicky Game</a>
                 <ul className="navbar-nav">
-                    <li>Score: 0 || Top Score: 0</li>
+                    <li>Score: {propts.score} || Top Score: {propts.totalscore}</li>
                 </ul>
             </nav>
 
