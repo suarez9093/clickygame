@@ -3,7 +3,10 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import ToyCard from "./components/ToyCard";
 import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 import toys from "./toys.json";
+import "./style.css";
+
 
 class App extends Component {
 
@@ -13,22 +16,28 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
+                
                 <Navbar />
                 <Header />
-                {this.state.toys.map(toy => (
-                    <ToyCard
-                        id={toy.id}
-                        name={toy.name}
-                        image={toy.image}
-                        role={toy.role}
-                    />
-                ))}
-                <Footer />
+                <Wrapper>
+                    {this.state.toys.map(toy => (
+                        <ToyCard
+                            id={toy.id}
+                            name={toy.name}
+                            image={toy.image}
+                            role={toy.role}
+                            randomizeToys={this.randomizeToys}
+                        />
+                    ))}
+                    {/* <Footer /> */}
+                </Wrapper>
             </div>
         );
     }
 
 }
+
+
 
 export default App;
