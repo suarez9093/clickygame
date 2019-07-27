@@ -14,6 +14,12 @@ class App extends Component {
         toys
     }
 
+    scoreIncrement = () => {
+        const toys = this.state.toys.filter(toy => toy.id);
+        console.log("Toys: " + toys);
+        // alert(`${this.state.toys} was clicked!`)
+    }
+
     render() {
         return (
             <div className="main">
@@ -27,7 +33,8 @@ class App extends Component {
                             name={toy.name}
                             image={toy.image}
                             role={toy.role}
-                            randomizeToys={this.randomizeToys}
+                            scoreIncrement={this.scoreIncrement}
+                            
                         />
                     ))}
                     {/* <Footer /> */}

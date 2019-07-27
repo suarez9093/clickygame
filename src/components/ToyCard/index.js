@@ -1,10 +1,12 @@
 import React from "react";
 import "./style.css"
-function ToyCard(props) {
+import { prototype } from "module";
+import { tsPropertySignature } from "@babel/types";
+function ToyCard(propts) {
     return (
        
             <div>
-                <img className="card-img-top" alt={props.name} src={props.image} />
+                <img className="card-img-top" alt={propts.name} src={propts.image} onClick={() => propts.scoreIncrement(propts.id)}/>
                 {/* <span onClick={() => props.randomizeToys(props.id)} className="remove">
         𝘅
       </span> */}
