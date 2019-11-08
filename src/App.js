@@ -52,7 +52,17 @@ class App extends Component {
             <div>
                 
                 <Navbar score={this.state.score} totalscore={this.state.totalscore}/>
-                <Header >Clicky Game</ Header>
+                <Header >{this.state.toys.map(toy => (
+                        <ToyCard
+                            id={toy.id}
+                            name={toy.name}
+                            image={toy.image}
+                            role={toy.role}
+                            key={toy.id}
+                            scoreIncrement={this.scoreIncrement}
+                            
+                        />
+                    ))}</ Header>
                 <Wrapper>
                     {this.state.toys.map(toy => (
                         <ToyCard
@@ -65,9 +75,8 @@ class App extends Component {
                             
                         />
                     ))}
-                    {/* <Footer /> */}
                 </Wrapper>
-                <Music />
+                {/* <Music /> */}
             </div>
         );
     }
