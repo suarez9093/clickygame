@@ -51,8 +51,8 @@ class App extends Component {
         return (
             <div>
                 
-                <Navbar score={this.state.score} totalscore={this.state.totalscore}/>
-                <Header >{this.state.toys.map(toy => (
+                {/* <Navbar score={this.state.score} totalscore={this.state.totalscore}/> */}
+                <Header score={this.state.score} totalscore={this.state.totalscore}>{this.state.toys.map(toy => (
                         <ToyCard
                             id={toy.id}
                             name={toy.name}
