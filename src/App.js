@@ -49,8 +49,8 @@ class App extends Component {
         return (
             <div className="main">
                 
-                <Navbar />
-                <Header score={this.state.score} totalscore={this.state.totalscore}/>
+                <Navbar score={this.state.score} totalscore={this.state.totalscore}/>
+                <Header >Clicky Game</ Header>
                 <Wrapper>
                     {this.state.toys.map(toy => (
                         <ToyCard

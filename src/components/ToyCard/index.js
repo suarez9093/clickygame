@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css"
-import { prototype } from "module";
-import { tsPropertySignature } from "@babel/types";
+
 function ToyCard(propts) {
     return (
        
