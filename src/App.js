@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import toys from "./toys.json";
 import "./style.css";
-
+import Music from "./components/Music";
 
 class App extends Component {
 
@@ -16,11 +16,11 @@ class App extends Component {
         totalscore: 0
     }
 
+   
     endGame = () => {
-        if (this.state.score > this.state.totalscore) {
-          this.setState({totalscore: this.state.score},function(){
-            console.log(this.state.totalscore)
-          })
+
+      if (this.state.score > this.state.totalscore) {
+          this.setState({totalscore: this.state.score})
         };
         this.state.toys.forEach(toy => {
           toy.count = 0;
@@ -49,7 +49,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="main">
+            <div>
                 
                 <Navbar score={this.state.score} totalscore={this.state.totalscore}/>
                 <Header >Clicky Game</ Header>
@@ -67,6 +67,7 @@ class App extends Component {
                     ))}
                     {/* <Footer /> */}
                 </Wrapper>
+                <Music />
             </div>
         );
     }
