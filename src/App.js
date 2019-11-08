@@ -18,7 +18,9 @@ class App extends Component {
 
     endGame = () => {
         if (this.state.score > this.state.totalscore) {
-          this.setState({totalscore: this.state.score})
+          this.setState({totalscore: this.state.score},function(){
+            console.log(this.state.totalscore)
+          })
         };
         this.state.toys.forEach(toy => {
           toy.count = 0;
@@ -58,6 +60,7 @@ class App extends Component {
                             name={toy.name}
                             image={toy.image}
                             role={toy.role}
+                            key={toy.id}
                             scoreIncrement={this.scoreIncrement}
                             
                         />
