@@ -1,7 +1,6 @@
 
  <h3 align="center">Clicky Game</h3>
- 
-![Project Name](gif/)
+
 
 <!-- PROJECT LOGO -->
 <br />
